@@ -1,4 +1,4 @@
-import logo from '../../../public/assets/shuffle.svg'
+import logo from '../../assets/shuffle.svg'
 import './style.css'
 
 export default function Header() {
