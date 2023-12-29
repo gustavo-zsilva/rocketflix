@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Inter', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    
+    background: rgb(30,70,163); 
+    background: linear-gradient(45deg, rgba(30,70,163,1) 0%, rgba(0,0,0,1) 50%, rgba(193,35,92,1) 100%); 
+}
