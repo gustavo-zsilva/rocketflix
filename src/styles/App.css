@@ -1,3 +1,10 @@
+:root {
+    --title: #fffcf9;
+    --subtitle: #b3b3b3;
+    --bg-button: #e9e6e3;
+    --background: linear-gradient(43deg, #102d71 0%, #000000 52%, #c12a23 100%);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,9 +15,26 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    background: var(--background);
+}
+
 .container {
     height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+
+    gap: 1.8rem;
+}
+
+.container p {
+    text-align: center;
     
-    background: rgb(30,70,163); 
-    background: linear-gradient(45deg, rgba(30,70,163,1) 0%, rgba(0,0,0,1) 50%, rgba(193,35,92,1) 100%); 
+    color: var(--subtitle);
+    max-width: 28rem;
 }
