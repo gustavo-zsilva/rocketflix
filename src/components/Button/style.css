@@ -1,0 +1,19 @@
+button {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+
+    background: var(--bg-button);
+    border: 0;
+    border-radius: .2rem;
+    padding: .9rem;
+
+    font-weight: 700;
+    font-size: .85rem;
+
+    cursor: pointer;
+}
+
+button img {
+    width: 36px;
+}
