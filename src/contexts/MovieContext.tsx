@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useEffect, useState } from "react";
+import { ReactNode, createContext, useState } from "react";
 
 import axios from "axios";
 import { api } from "../library/api";
@@ -26,6 +26,18 @@ export function MovieProvider({ children }: MovieProviderProps) {
     const [movie, setMovie] = useState<MovieProps | null>(null)
 
     async function getMovie() {
+        
+        // Fix this with spread operator
+        const movieReset: MovieProps | null = {
+            adult: false,
+            overview: "",
+            poster_url: "",
+            release_date: "",
+            title: "",
+        }
+
+        setMovie(movieReset)
+
         try {
             const response = await api.get('/latest')
             const movieID = response.data.id;

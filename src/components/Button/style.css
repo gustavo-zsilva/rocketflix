@@ -12,6 +12,20 @@ button {
     font-size: .85rem;
 
     cursor: pointer;
+    transition: .2s;
+}
+
+button.get-movie-btn:hover {
+    border-right: 10px solid var(--subtitle);
+    border-bottom: 10px solid var(--subtitle);
+
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+button:focus {
+    outline: 3px solid #222A68;
+    box-shadow: 0px 0px 50px 5px #222A68;
 }
 
 button img {

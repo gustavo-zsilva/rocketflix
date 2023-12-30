@@ -9,7 +9,7 @@ export default function Button() {
     const { getMovie } = useContext(MovieContext)
 
     return (
-        <button onClick={getMovie}>
+        <button className="get-movie-btn" onClick={getMovie}>
             <img src={shuffleSvg} alt="Shuffle" />
             Encontrar filme
         </button>

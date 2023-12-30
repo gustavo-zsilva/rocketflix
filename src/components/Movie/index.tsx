@@ -15,7 +15,9 @@ export default function Movie() {
     }
 
     useEffect(() => {
-        return () => setIsAdultContentVisible(false)
+        if (movie?.adult) {
+            setIsAdultContentVisible(false)
+        }
     }, [movie])
 
     return (
