@@ -14,6 +14,8 @@ type MovieProps = {
     title: string,
     overview: string,
     poster_url: string,
+    adult: boolean,
+    release_date: string,
 }
 
 type MovieProviderProps = {
@@ -60,11 +62,6 @@ export function MovieProvider({ children }: MovieProviderProps) {
             console.error(err)
         }
     }
-
-    useEffect(() => {
-        console.log(movie?.title);
-        
-    }, [movie])
 
     return (
         <MovieContext.Provider

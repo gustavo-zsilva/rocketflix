@@ -1,23 +1,55 @@
-import { useContext } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import { MovieContext } from '../../contexts/MovieContext'
 
+import { TbError404 } from 'react-icons/tb'
+import { FaRegEyeSlash, FaRegEye } from 'react-icons/fa6'
 import './style.css'
 
 export default function Movie() {
     const { movie } = useContext(MovieContext)
+    const [isAdultContentVisible, setIsAdultContentVisible] = useState(false)
+    const formattedReleaseDate = movie?.release_date.slice(0, 4)
 
-    console.log(movie)
+    function toggleAdultContentVisibility() {
+        setIsAdultContentVisible(!isAdultContentVisible)
+    }
+
+    useEffect(() => {
+        return () => setIsAdultContentVisible(false)
+    }, [movie])
 
     return (
         <div className="movie">
             {movie?.poster_url ? (
-                <img src={movie?.poster_url} alt="Movie poster" />
+                <img
+                    src={movie?.poster_url}
+                    alt="Movie poster"
+                    style={{ filter: movie.adult && !isAdultContentVisible ? "blur(10px)" : "initial" }}
+                />
             ) : (
-                <div className="not-found" />
+                <div className="not-found">
+                    <TbError404 size={45} title="404" />
+                    <h3>Uh Oh!</h3>
+                    <p>Parece que não encontramos o poster deste filme.</p>
+                </div>
             )}
             <div className="content">
-                <h3>{movie?.title}</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, accusamus natus! Tempora, ullam! Optio accusamus expedita delectus dolor libero, sit quod sint velit nostrum, incidunt necessitatibus sed dolorum iure reprehenderit.</p>
+                <header>
+                    <div>
+                        <h3>{movie?.title}</h3>
+                        <span className="release-date">{formattedReleaseDate}</span>
+                    </div>
+                    {movie?.adult && (
+                        <button title="Adult Content" onClick={toggleAdultContentVisibility}>
+                            {
+                                isAdultContentVisible ?
+                                <FaRegEye size={22} /> :
+                                <FaRegEyeSlash size={22} />
+                            }
+                        </button>
+                    )}
+                </header>
+                <p>{movie?.overview}</p>
             </div>
         </div>
     )

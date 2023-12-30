@@ -3,7 +3,7 @@ import './style.css'
 
 export default function Header() {
     return (
-        <header>
+        <header className="page-header">
             <img src={logo} alt="Shuffle" />
             <h1>
                 Não sabe o que assistir?
