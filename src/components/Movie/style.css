@@ -1,0 +1,31 @@
+.movie {
+    display: flex;
+    gap: 1rem;
+
+    max-width: 100%;
+}
+
+.movie img {
+    width: auto;
+    height: 16rem;
+}
+
+.movie .not-found {
+    height: 16rem;
+    width: 40rem;
+    background-color: var(--subtitle);
+}
+
+.content {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.content h3 {
+    color: var(--title);
+}
+
+.content p {
+    line-height: 1.6rem;
+    
+}

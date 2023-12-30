@@ -17,6 +17,7 @@
 
 html {
     background: var(--background);
+    color: var(--title);
 }
 
 .container {
@@ -28,11 +29,12 @@ html {
     align-items: center;
 
     margin: auto;
+    max-width: 40rem;
 
     gap: 1.8rem;
 }
 
-.container p {
+.container > p {
     text-align: center;
     
     color: var(--subtitle);
