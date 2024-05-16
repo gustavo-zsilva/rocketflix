@@ -36,7 +36,7 @@ Este projeto foi realizado como desafio da Rocketseat.
 
 ## 🔖 Layout
 
-Não há um arquivo de layout para o projeto.
+- [Acesse o layout do projeto aqui](https://desafios-discover.vercel.app/index.html)
 
 ## :memo: Licença
 
