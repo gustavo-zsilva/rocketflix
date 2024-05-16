@@ -22,11 +22,11 @@ Another movie finder, for those who want a spice of randomness in their choices.
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- NextJS v14
-- TailwindCSS
+- ReactJS
+- Axios
 - Typescript
+- TMDB API
 - Git e Github
-- Vercel
 
 ## 💻 Projeto
 
